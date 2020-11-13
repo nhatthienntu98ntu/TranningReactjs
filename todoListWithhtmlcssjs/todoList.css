@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.container {
+  width: 1240px;
+  margin: 0 auto;
+}
+.todo {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #000;
+}
+.todo-list {
+  width: 34%;
+}
+.todo-list .todo-item {
+  background-color: rgb(214, 231, 212);
+  width: 100%;
+  border: 1px solid #000;
+  text-align: center;
+  cursor: pointer;
+}
+.todo-list .item-action {
+  border: 1px solid rgb(201, 208, 193);
+}
+
+.todo-content {
+  width: calc(100% - 34% - 1px);
+}
+.todo-content .todo-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  margin-top: -10px;
+}
+.todo-content .todo-action .todo-action-add {
+  padding: 10px 30px;
+  border: 1px solid #000;
+  border-right: none;
+  cursor: pointer;
+}
+.todo-content .todo-action .todo-action-delete {
+  padding: 10px 30px;
+  border: 1px solid #000;
+  background-color: rgb(243, 206, 207);
+  cursor: pointer;
+}
+
+.todo-content .todo-description {
+  margin-left: 40px;
+}
+.todo-add {
+  width: 80%;
+  margin: 0 auto;
+}
+.todo-add input[type="text"] {
+  width: 100%;
+  border: 1px dashed #000;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+
+.todo-add input[type="submit"] {
+  float: right;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+.display-none {
+  display: none;
+}

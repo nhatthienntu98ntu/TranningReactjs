@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="todoList.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo">
+        <div class="todo-list"></div>
+        <div class="todo-content">
+          <div class="todo-action">
+            <p class="todo-action-add">Add New</p>
+            <p class="todo-action-delete">Delete</p>
+          </div>
+          <div class="todo-description display-none">
+            <p id="title">Book 1</p>
+            <p id="description">Description</p>
+          </div>
+          <div class="todo-add display-none">
+            <input
+              id="input-title"
+              type="text"
+              placeholder="Enter book name"
+              required
+            />
+            <input
+              id="input-description"
+              type="text"
+              placeholder="Enter description"
+              required
+            />
+            <input type="submit" value="Submit" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="todoList.js"></script>
+  </body>
+</html>
