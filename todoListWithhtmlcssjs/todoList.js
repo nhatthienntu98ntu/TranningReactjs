@@ -4,6 +4,8 @@ let deleteItemIndex = -1;
 let addButtom = document.querySelector(".todo-action-add");
 let deleteButtom = document.querySelector(".todo-action-delete");
 let submitButtom = document.querySelector("input[type='submit']");
+let inputTitle = document.querySelector("#input-title");
+let inputDescription = document.querySelector("#input-description");
 
 function initData() {
   for (let i = 0; i < arrItems.length; i++) {
@@ -81,9 +83,7 @@ deleteButtom.addEventListener("click", () => {
   }
 });
 
-submitButtom.addEventListener("click", (event) => {
-  let inputTitle = document.querySelector("#input-title");
-  let inputDescription = document.querySelector("#input-description");
+function addItem() {
   if (inputTitle.value && inputDescription.value) {
     arrItems.push({
       title: inputTitle.value,
@@ -100,5 +100,19 @@ submitButtom.addEventListener("click", (event) => {
     } else if (!inputDescription.value) {
       inputDescription.focus();
     }
+  }
+}
+
+submitButtom.addEventListener("click", addItem());
+
+inputTitle.addEventListener("keydown", (event) => {
+  if (event.keyCode === 13) {
+    addItem();
+  }
+});
+
+inputDescription.addEventListener("keydown", (event) => {
+  if (event.keyCode === 13) {
+    addItem();
   }
 });
