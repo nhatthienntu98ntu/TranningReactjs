@@ -103,7 +103,7 @@ function addItem() {
   }
 }
 
-submitButtom.addEventListener("click", addItem());
+submitButtom.addEventListener("click", () => addItem());
 
 inputTitle.addEventListener("keydown", (event) => {
   if (event.keyCode === 13) {
